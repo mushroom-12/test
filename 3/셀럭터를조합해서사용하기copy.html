@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adocado</title>
+<style>
+    /*li {color:greenyellow;}
+    ins {font-weight:bold;}
+    .HJ {font-size:2px;}
+    #stu {font-size: 40px;}*/
+    li > ins {font-weight:bold}
+    /*li가 ins의 부모일 때만 적용, 그런데 부모가 아닌 자손일때는 꺽쇠를 안쓰고 스페이스만 쓰기*/
+    /*li.HJ {color: pink; 
+            background-color: black;}*/
+    /*li안에 있는 class HJ에만 적용, 밖에 있는  <div class="HJ"><ins>60점 이하</ins>는 F!!!!!!!!!!!!!</div>여기에는 적용이 안됨*/
+    * {background-color: pink;}
+    #unli {background-color:white}
+    
+</style>
+</head>
+<body>                              <!--그러니깐 전체를 적용하는건 *을 써서 적용 가능한데 body 문에도 적용 가능, 하지만 css부분에 적은 건 -->
+<div>
+    <div>
+        학기
+        <strong id="stu">
+            학습내용
+        </strong>
+    </div>
+    <ul class="unli">
+        <li class="HJ">HTML5</li>
+        <li><ins>CSS</ins></li>
+        <li class="HJ">Javascript</li>
+    </ul>
+    <div class="HJ"><ins>60점 이하</ins>는 F!!!!!!!!!!!!!</div>
+</div>
+</body>
+</html>
